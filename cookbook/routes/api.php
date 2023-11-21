@@ -26,4 +26,6 @@ Route::get('recipes', 'App\Http\Controllers\RecipesController@index');
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('/recipes', 'App\Http\Controllers\RecipesController@store');
     Route::post('/recipes/{id}', 'App\Http\Controllers\ReccipesController@update');
+    Route::get('/feedback', 'App\Http\Controllers\FeedbackController@inndex');
+    Route::post('')
 });
